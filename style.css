@@ -40,12 +40,7 @@
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
   }
-  /*
-    8. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
+
   .row{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -146,12 +141,13 @@ margin-block-end: 5px;
   .footer{
     font-size: 15px;
   }
-  @media (max-width: 520px) {
+  @media screen and (max-width: 520px) {
     .row{
         display: grid;
         grid-template-columns: 1fr;
         margin-block-start: 41px;
-        margin-inline: 60px;
+        margin-inline: 0px;
+        
       }
       .form-grid{
         display: grid;
@@ -161,6 +157,9 @@ margin-block-end: 5px;
       }
       .form-control{
         width: 100%;
+      }
+      .col-1{
+        padding-inline-start: 12px;
       }
       .grid{
         width: 100%;
@@ -176,7 +175,7 @@ margin-block-end: 5px;
         background: #FFF;
         box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.10);
         padding: 40px;
-        margin-inline: 30px;
+        margin-inline: 25px;
         margin-block-start: 20px;
       }
   }
